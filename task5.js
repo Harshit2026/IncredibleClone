@@ -1,33 +1,40 @@
 function getScroll(){
     let y = scrollY
+    let colors = ["#fff" , "#cf404d" ]
+    let links = [document.getElementById('hme').style.color , document.getElementById('abt').style.color , document.getElementById('glry').style.color,  
+                 document.getElementById('tact').style.color]
     if(y >=0 && y<238) {
-        document.getElementById('hme').style.color="#cf404d"
-        document.getElementById('abt').style.color="#fff"
-        document.getElementById('glry').style.color="#fff"
-        document.getElementById('tact').style.color="#fff"
+        links[0] = colors[1]
+        links[1] = colors[0]
+        links[2] = colors[0]
+        links[3] = colors[0]
 
     }
         
     else if(y > 238 && y <=960){
-        document.getElementById('hme').style.color="#fff"
-        document.getElementById('abt').style.color="#cf404d"
-        document.getElementById('glry').style.color="#fff"
-        document.getElementById('tact').style.color="#fff"
+        links[0] = colors[0]
+        links[1] = colors[1]
+        links[2] = colors[0]
+        links[3] = colors[0]
+
 
 
     }
     else if(y > 960 && y <= 1618){
-        document.getElementById('hme').style.color="#fff"
-        document.getElementById('abt').style.color="#fff"
-        document.getElementById('glry').style.color="#cf404d"
-        document.getElementById('tact').style.color="#fff"
+        links[0] = colors[0]
+        links[1] = colors[0]
+        links[2] = colors[1]
+        links[2] = colors[0]
+
 
     }
-    else if(y > 1618) {
-        document.getElementById('hme').style.color="#fff"
-        document.getElementById('abt').style.color="#fff"
-        document.getElementById('glry').style.color="#fff"
-        document.getElementById('tact').style.color="#cf404d"
+    else {
+        links[0] = colors[0]
+        links[1] = colors[0]
+        links[2] = colors[0]
+        links[2] = colors[1]
+    }
+        
     }
         
 }
