@@ -1,38 +1,34 @@
 function getScroll(){
     let y = scrollY
-    let colors = ["#fff" , "#cf404d" ]
-    let links = [document.getElementById('hme') , document.getElementById('abt') , document.getElementById('glry'),  
-                 document.getElementById('tact')]
     if(y >=0 && y<238) {
-        links[0].style.color = colors[1]
-        links[1].style.color = colors[0]
-        links[2].style.color = colors[0]
-        links[3].style.color = colors[0]
+        document.getElementById('hme').style.color="#cf404d"
+        document.getElementById('abt').style.color="#fff"
+        document.getElementById('glry').style.color="#fff"
+        document.getElementById('tact').style.color="#fff"
 
     }
-        
-    else if(y > 238 && y <=960){
-        links[0].style.color = colors[0]
-        links[1].style.color = colors[1]
-        links[2].style.color = colors[0]
-        links[3].style.color = colors[0]
 
+    else if(y > 238 && y <=960){
+        document.getElementById('hme').style.color="#fff"
+        document.getElementById('abt').style.color="#cf404d"
+        document.getElementById('glry').style.color="#fff"
+        document.getElementById('tact').style.color="#fff"
 
 
     }
     else if(y > 960 && y <= 1618){
-        links[0].style.color = colors[0]
-        links[1].style.color = colors[0]
-        links[2].style.color = colors[1]
-        links[3].style.color = colors[0]
-
+        document.getElementById('hme').style.color="#fff"
+        document.getElementById('abt').style.color="#fff"
+        document.getElementById('glry').style.color="#cf404d"
+        document.getElementById('tact').style.color="#fff"
 
     }
-    else {
-        links[0].style.color = colors[0]
-        links[1].style.color = colors[0]
-        links[2].style.color = colors[0]
-        links[3].style.color = colors[1]
+    else if(y > 1618) {
+        document.getElementById('hme').style.color="#fff"
+        document.getElementById('abt').style.color="#fff"
+        document.getElementById('glry').style.color="#fff"
+        document.getElementById('tact').style.color="#cf404d"
     }
+
 }
-setInterval(getScroll , 250);
+setInterval(getScroll,250);   //960 //1618
