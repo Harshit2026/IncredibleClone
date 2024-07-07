@@ -24,7 +24,7 @@ function getScroll(){
         links[0] = colors[0]
         links[1] = colors[0]
         links[2] = colors[1]
-        links[2] = colors[0]
+        links[3] = colors[0]
 
 
     }
@@ -32,8 +32,10 @@ function getScroll(){
         links[0] = colors[0]
         links[1] = colors[0]
         links[2] = colors[0]
-        links[2] = colors[1]
+        links[3] = colors[1]
     }
+}
+setInterval(getScroll , 250);
         
     }
         
